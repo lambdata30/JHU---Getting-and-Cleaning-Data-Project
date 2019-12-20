@@ -32,9 +32,9 @@ The factor() function was deployed with levels ranging from 1 to 6 (activity lab
 Here, the tolower and gsub and functions were used to alter the variables names as followed:
 
 1. all column names were converted to lower case.
-2. special characters were removed ie - '_', '-', '()'. 
+2. special characters were removed ie - '_', '-', '()' ','. 
 3. 'bodybody' was replaced with body.
 
 ### 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject. ###
 
-This was performed using the tidyr functions group.by() as well as summarise.each(). The output of this script can be found in the tidy_data.txt
+This was performed using the tidyr functions group.by() as well as summarise.each(). The output of this script can be found in the `tidy_data.txt`
