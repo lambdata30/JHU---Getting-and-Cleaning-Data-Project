@@ -30,9 +30,10 @@ The factor() function was deployed with levels ranging from 1 to 6 (activity lab
 ### 4. Appropriately labels the data set with descriptive variable names. ###
 
 Here, the tolower and gsub and functions were used to alter the variables names as followed:
-a. all column names were converted to lower case.
-b. special characters were removed ie - '_', '-', '()'. 
-c. 'bodybody' was replaced with body.
+
+1. all column names were converted to lower case.
+2. special characters were removed ie - '_', '-', '()'. 
+3. 'bodybody' was replaced with body.
 
 ### 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject. ###
 
