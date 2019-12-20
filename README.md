@@ -14,7 +14,7 @@ The sensor signals (accelerometer and gyroscope) were pre-processed by applying 
 `codebook.md`:
 File describing the variables
 
-`run_analysis.R`: 
+`Run_analysis.R`: 
 This script is designed to perform the required task set out by the project. 
 
 ### 1. Merges the training and the test sets to create one data set. ###
