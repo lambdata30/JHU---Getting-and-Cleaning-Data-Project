@@ -11,28 +11,29 @@ The sensor signals (accelerometer and gyroscope) were pre-processed by applying 
 
 ## Files:
 
-codebook.md:
+`codebook.md`:
 File describing the variables
 
-run_analysis.R: 
+`run_analysis.R`: 
 This script is designed to perform the required task set out by the project. 
 
-1. Merges the training and the test sets to create one data set.
-2. Extracts only the measurements on the mean and standard deviation for each measurement.
+### 1. Merges the training and the test sets to create one data set. ###
+
+### 2. Extracts only the measurements on the mean and standard deviation for each measurement. ###
 
 This was done using the grepl() function - only selecting columns containing 'std', 'mean' as well as subject identifiers 'subject' and 'activity.type'/
 
-3. Uses descriptive activity names to name the activities in the data set
+### 3. Uses descriptive activity names to name the activities in the data set ###
 
 The factor() function was deployed with levels ranging from 1 to 6 (activity label). The labels correspond with the activities described in activity_labels.txt.
 
-4. Appropriately labels the data set with descriptive variable names.
+### 4. Appropriately labels the data set with descriptive variable names. ###
 
 Here, the tolower and gsub and functions were used to alter the variables names as followed:
-a. all column names were converted to lower case
+a. all column names were converted to lower case.
 b. special characters were removed ie - '_', '-', '()'. 
-c. 'bodybody' was replaced with body
+c. 'bodybody' was replaced with body.
 
-5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+### 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject. ###
 
 This was performed using the tidyr functions group.by() as well as summarise.each(). The output of this script can be found in the tidy_data.txt
