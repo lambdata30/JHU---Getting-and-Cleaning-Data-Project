@@ -15,8 +15,8 @@
 # GOAL OF PROJECT
 
 # Develop a script called 'run_analysis.R' which obtains, merges,
-# cleans and creates a independent tidy data set with the 
-# average of a number of variables for each variable and subject 
+# cleans and creates a independent tidy data set containing the 
+# means of a number of variables for each variable and subject 
 # involved in the study.
 
 #################################################################
