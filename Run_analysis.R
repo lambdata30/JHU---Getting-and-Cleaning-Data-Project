@@ -28,10 +28,10 @@
 # loading useful packages 
 library(tidyverse) 
 
-# assinging download lodation
+# download location
 data.url <- 'https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip'
 
-# Getting Data
+# Getting data
 if(!file.exists('UIC_data.zip')) {
   download.file(data.url, destfile = 'UIC_data.zip')
   unzip('UIC_data.zip')
