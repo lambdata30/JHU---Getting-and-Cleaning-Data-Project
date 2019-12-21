@@ -90,19 +90,25 @@ all.data$activity.type <- factor(all.data$activity.type,
 # Note using tidyr - select function fails to work
 # as there are duplicate feature names. 
 # Therefore the grepl function will be used.
+# Will use both lower and upper case terms 
+# eg 'mean' and 'Mean'.
 
 filtered.columns <- grepl(
-  "subject|activity.type|mean|std", 
+  "subject|activity|std|mean|Std|Mean", 
   colnames(all.data))
 
+# filtering all data with filtered columns
 filtered.data <- all.data[, filtered.columns]
 
+# Cleaning up column names - ie removing special characters
+# Changing t to time and f to frequency
+# Changing bodybody to body
 filtered.data.cols <- colnames(filtered.data) %>%
   gsub('[-]', '', .) %>%
   gsub('[()]','',.) %>%
   gsub('[,]', '',.) %>%
   sub('^t','time',.) %>%
-  sub('^f', 'frequence',.) %>%
+  sub('^f', 'frequency',.) %>%
   gsub('bodybody','body',.) 
 
 # Apply new column names to filtered data set
@@ -122,6 +128,4 @@ tidy.data <- filtered.data %>%
   summarise_each(funs(mean))
 
 # write 'tidy_data.txt' file
-write.table(tidy.data, file ='tidy_data.txt')
-
-
+write.table(tidy.data, file ='tidy_data.txt', row.name = FALSE)
