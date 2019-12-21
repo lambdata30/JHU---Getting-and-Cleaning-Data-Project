@@ -101,6 +101,8 @@ filtered.data.cols <- colnames(filtered.data) %>%
   gsub('[-]', '', .) %>%
   gsub('[()]','',.) %>%
   gsub('[,]', '',.) %>%
+  sub('^t','time',.) %>%
+  sub('^f', 'frequence',.) %>%
   gsub('bodybody','body',.) 
 
 # Apply new column names to filtered data set
